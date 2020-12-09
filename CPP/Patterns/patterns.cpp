@@ -117,12 +117,61 @@ int main() {
     11 12 13 14 15
     */
     cout<<"Floyd Triangle: "<<endl;
+    int count = 1;
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= i; j++) {
-            cout<<j<<" ";
+            cout<<count<<" ";
+            count++;
         }
         cout<<endl;
     }
+
+    /*
+    Butterfly Pattern (n = 4)
+
+    *             *
+    * *         * *
+    * * *     * * *
+    * * * * * * * *
+    * * * * * * * *
+    * * *     * * *
+    * *         * *
+    *             *
+
+    */
+    cout<<"Butterfly Pattern for n = "<<row<<endl;
+    for (int i = 1; i <= row; i++) {
+      for (int j = 1; j <= i; j++) {
+        cout<<"* ";
+        // cout<<i<<" ";
+      }
+      int space = 2*row - 2*i;
+      for (int j = 1; j <= space; j++) {
+        cout<<"  ";
+      }
+      for(int j = 1; j <= i; j++) {
+        cout<<"* ";
+        // cout<<i<<" ";
+      }
+      cout<<endl;
+    }
+    for (int i = row; i >= 1; i--) {
+      for (int j = 1; j <= i; j++) {
+        cout<<"* ";
+        // cout<<i<<" ";
+      }
+      int space = 2*row - 2*i;
+      for (int j = 1; j <= space; j++) {
+        cout<<"  ";
+      }
+      for(int j = 1; j <= i; j++) {
+        cout<<"* ";
+        // cout<<i<<" ";
+      }
+      cout<<endl;
+    }
+
+
     return 0;
 }
 
