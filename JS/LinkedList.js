@@ -199,6 +199,9 @@ class LinkedList {
     return null;
   }
 }
+
+export { LinkedList, ListNode }
+
 Array.prototype.toLinkedList = function () {
   const list = new LinkedList();
   this.forEach(item => list.addLast(item));
