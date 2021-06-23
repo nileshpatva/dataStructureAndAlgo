@@ -1,11 +1,10 @@
 
 function sort(nums) {
-
   let low = 0;
   let mid = 0;
   let hi = nums.length - 1;
-
   while (mid <= hi) {
+    console.log({low, mid, hi}, nums)
     switch (nums[mid]) {
       case 0:
         {
@@ -31,4 +30,4 @@ function sort(nums) {
   return nums;
 }
 
-console.log(sort([1, 1, 0, 1, 0, 0, 0, 2, 1, 1, 1, 2, 2, 2, 0, 0, 1, 2]));
+console.log(sort([0, 1, 0, 1, 0, 0, 0, 2, 1, 1, 1, 2, 2, 2, 0, 0, 1, 2]));
