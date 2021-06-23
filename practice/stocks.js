@@ -19,10 +19,8 @@ function maxProfit(stocks) {
         idx.push([buy, sell]);
       }
       max += profit;
-      buy++;
-    } else {
-      buy = sell;
-    }
+    } 
+    buy++;
     sell++;
   }
   console.log({ max, idx });
